@@ -1,89 +1,52 @@
-# Restaurant Rewards App
+# RewardsApp
 
-A web application where users earn stars based on visits to different restaurants, which unlock rewards after reaching certain thresholds.
+A rewards application built with Next.js that allows users to track their visits and earn rewards.
 
 ## Features
 
-- User authentication (login/register)
-- Dashboard with restaurant tiles
-- Individual restaurant pages with reward tiers
-- Visual progress indicators for rewards
-- Responsive design for all devices
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or later)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository
-```bash
-git clone https://github.com/yourusername/restaurant-rewards-app.git
-cd restaurant-rewards-app
-```
-
-2. Install dependencies
-```bash
-npm install
-# or
-yarn install
-```
-
-3. Run the development server
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+- User authentication with NextAuth.js
+- Admin and regular user roles
+- Mock authentication for testing without MongoDB
+- Responsive design
 
 ## Demo Credentials
 
-For testing purposes, you can use the following credentials:
-
+**Regular User:**
 - Email: user@example.com
-- Password: password
+- Password: password123
 
-## How It Works
-
-1. Users create an account or log in
-2. The dashboard displays a grid of participating restaurants
-3. Users can click on a restaurant to view its details and reward tiers
-4. Each visit to a restaurant earns the user 1 star for that specific restaurant
-5. Stars accumulate and unlock rewards at specific thresholds (10, 20, 30, 40, and 50 stars)
-6. Users can view their progress toward each reward tier
+**Admin User:**
+- Email: admin@example.com
+- Password: admin123
 
 ## Technologies Used
 
-- Next.js
+- Next.js 14
 - React
-- TypeScript
+- NextAuth.js
+- MongoDB (optional)
 - Tailwind CSS
-- Framer Motion (for animations)
 
-## Project Structure
+## Getting Started
 
-- `/app` - Next.js app directory
-  - `/components` - Reusable UI components
-  - `/dashboard` - Dashboard page with restaurant tiles
-  - `/restaurant/[id]` - Individual restaurant pages
-  - `/login` - Login page
-  - `/register` - Registration page
-  - `/data` - Mock data for restaurants and rewards
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Create a `.env.local` file with your environment variables (see below)
+4. Run the development server: `npm run dev`
 
-## Future Enhancements
+## Environment Variables
 
-- Backend integration with a database
-- QR code scanning for visit verification
-- Push notifications for new rewards
-- Admin panel for managing restaurants and rewards
-- User profile page to view all earned rewards
-- Social sharing functionality
+Create a `.env.local` file in the root directory with the following variables:
 
-## License
+```
+MONGODB_URI=your_mongodb_connection_string
+MONGODB_DB=rewardsapp
+NEXTAUTH_SECRET=a_very_long_secret_value_at_least_32_chars
+NEXTAUTH_URL=http://localhost:3000
+```
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+Note: The application includes mock authentication, so you can test it without setting up MongoDB.
+
+## Notes
+
+This application was created as a demonstration project. The MongoDB connection is optional as the app includes mock authentication for testing purposes. 
