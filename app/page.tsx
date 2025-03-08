@@ -26,7 +26,11 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-center font-mono text-sm flex flex-col">
-        <FaStar className="h-16 w-16 text-secondary-500 mb-4" />
+        <div className="flex space-x-4 mb-4">
+          <FaStar className="h-20 w-20 text-secondary-500" />
+          <FaStar className="h-20 w-20 text-secondary-500" />
+          <FaStar className="h-20 w-20 text-secondary-500" />
+        </div>
         <h1 className="text-3xl font-bold mb-4">Restaurant Rewards</h1>
         <div className="flex items-center justify-center">
           <div className="animate-pulse flex space-x-4">
